@@ -22,13 +22,13 @@ public class EggSpawning : MonoBehaviour
         {
             EggSpawn();
             isSpawning = false;
-            PlayerController.isControlling = true;
+           
         }
     }
 
     void EggSpawn()
     {
-        int randomNumber = Random.Range(1, 4);
+        int randomNumber = Random.Range(1, 5);
         
         if (randomNumber == 1)
         {

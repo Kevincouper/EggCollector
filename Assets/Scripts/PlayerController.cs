@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject egg;
     [SerializeField]private Vector3 startPosition;
     
-    public static bool isControlling = true;
+    private bool isControlling = true;
     
     
     // Start is called before the first frame update
@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground")
         {
+           // body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             isControlling = false;
             EggSpawning.isSpawning = true;
         }
