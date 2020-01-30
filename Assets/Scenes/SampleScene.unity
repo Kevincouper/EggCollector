@@ -396,7 +396,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 346936270}
-  eggPrefab: {fileID: 3856432260293920361, guid: 969d65229955ac1419189053ad544368,
+  eggWhitePrefab: {fileID: 3856432260293920361, guid: 969d65229955ac1419189053ad544368,
+    type: 3}
+  eggBlackPrefab: {fileID: 3712123349962420686, guid: 8b693de9ab9d8414f86832b3352a9893,
+    type: 3}
+  eggPurplePrefab: {fileID: 5520898071984849945, guid: 2b4d834f7dae99c44ba5b0fc141d5a44,
+    type: 3}
+  eggYellowPrefab: {fileID: 3160499114062247207, guid: 5571b4257cf5f3d4cacf3239702f4ddf,
     type: 3}
 --- !u!1001 &7477331832272057286
 PrefabInstance:

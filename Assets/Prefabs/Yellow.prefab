@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4337889563530148351}
   - component: {fileID: 5226098408532353336}
   - component: {fileID: 7451198219748801823}
+  - component: {fileID: 9008462750321517944}
   m_Layer: 0
   m_Name: Yellow
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,3 +130,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &9008462750321517944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160499114062247207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811957a00b1db904eb8f62714d63fa1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  egg: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}

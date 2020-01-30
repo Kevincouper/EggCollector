@@ -14,30 +14,43 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject egg;
     [SerializeField]private Vector3 startPosition;
     
-    private bool changeEgg = false;
+    public static bool isControlling = true;
     
     
     // Start is called before the first frame update
     void Start()
     {
-
         body = GetComponent<Rigidbody2D>();
     }
     
     // Update is called once per frame
     void Update()
     {
-        body.velocity = new Vector2(speedX, speedY);
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (isControlling)
         {
-            body.position += new Vector2(-1f, 0);
+            body.velocity = new Vector2(speedX, speedY);
 
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                body.position += new Vector2(-1f, 0);
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                body.position += new Vector2(1f, 0);
+
+            }
         }
-        if (Input.GetKeyDown(KeyCode.E))
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "ground")
         {
-            body.position += new Vector2(1f, 0);
-
+            isControlling = false;
+            EggSpawning.isSpawning = true;
         }
-        
     }
 }
