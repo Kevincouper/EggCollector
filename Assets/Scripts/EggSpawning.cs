@@ -6,23 +6,23 @@ using Random = UnityEngine.Random;
 
 public class EggSpawning : MonoBehaviour
 {
-    [SerializeField] Transform spawnPoint;
+
+    [SerializeField] Transform spawnPoint;    
+    [SerializeField] Transform NextEggPoint;
     [SerializeField] GameObject eggWhitePrefab;
     [SerializeField] GameObject eggBlackPrefab;
     [SerializeField] GameObject eggPurplePrefab;
     [SerializeField] GameObject eggYellowPrefab;
 
     public static bool isSpawning = true;
-    
 
-    // Update is called once per frame
     void Update()
     {
+
         if (isSpawning)
         {
             EggSpawn();
             isSpawning = false;
-           
         }
     }
 
@@ -47,5 +47,5 @@ public class EggSpawning : MonoBehaviour
             GameObject egg = Instantiate(eggYellowPrefab, spawnPoint.position, spawnPoint.rotation);
         }
     }
-    
+
 }

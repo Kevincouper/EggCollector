@@ -30,16 +30,14 @@ public class PlayerController : MonoBehaviour
         {
             body.velocity = new Vector2(speedX, speedY);
 
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetMouseButtonDown(0))
             {
-                body.position += new Vector2(-1f, 0);
-
+               LeftDirection();
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButtonDown(1))
             {
-                body.position += new Vector2(1f, 0);
-
+                RightDirection();
             }
         }
 
@@ -53,5 +51,15 @@ public class PlayerController : MonoBehaviour
             isControlling = false;
             EggSpawning.isSpawning = true;
         }
+    }
+
+    void LeftDirection()
+    {
+        body.position += new Vector2(-1f, 0);
+    }
+    
+    void RightDirection()
+    {
+        body.position += new Vector2(1f, 0);
     }
 }

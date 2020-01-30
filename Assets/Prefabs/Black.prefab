@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8018130767514598484}
   - component: {fileID: 5674288576716531147}
   - component: {fileID: 5142209417401052251}
-  - component: {fileID: -6589069658539349444}
+  - component: {fileID: -3299285451200008950}
   m_Layer: 0
   m_Name: Black
   m_TagString: ground
@@ -130,7 +130,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-6589069658539349444
+--- !u!114 &-3299285451200008950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
