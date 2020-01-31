@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
     Rigidbody2D body;
     Vector2 direction;
     float speedY = -1f;
@@ -16,14 +15,11 @@ public class PlayerController : MonoBehaviour
     
     private bool isControlling = true;
     
-    
-    // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
     }
-    
-    // Update is called once per frame
+ 
     void Update()
     {
         if (isControlling)
@@ -40,7 +36,6 @@ public class PlayerController : MonoBehaviour
                 RightDirection();
             }
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
