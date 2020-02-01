@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D body;
     Vector2 direction;
-    float speedY = -2f;
+    float speedY = -4f;
     private float speedX = 0f;
     private float movementX = 0f;
     [SerializeField] GameObject egg;
@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
             isControlling = false;
             EggSpawning.isSpawning = true;
             isGround = false;
+            Score.score += 10;
             Destroy(this);
         }
     }
