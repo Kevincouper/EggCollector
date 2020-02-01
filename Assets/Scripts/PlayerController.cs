@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
             isControlling = false;
             EggSpawning.isSpawning = true;
             isGround = false;
+            Score.score += 10;
             Destroy(this);
         }
     }
