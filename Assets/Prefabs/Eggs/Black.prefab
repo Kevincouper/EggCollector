@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb18f0aa2cd78a4bb244548feba957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eggName: blackEgg
 --- !u!1 &436724259
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb18f0aa2cd78a4bb244548feba957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eggName: blackEgg
 --- !u!1 &524167982
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb18f0aa2cd78a4bb244548feba957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eggName: blackEgg
 --- !u!1 &1653730163
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb18f0aa2cd78a4bb244548feba957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eggName: blackEgg
 --- !u!1 &3712123349962420686
 GameObject:
   m_ObjectHideFlags: 0

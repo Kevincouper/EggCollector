@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckWinBlack : MonoBehaviour
+public class CheckWin : MonoBehaviour
 {
     
    public static float number = 0;
@@ -12,6 +12,7 @@ public class CheckWinBlack : MonoBehaviour
         if (number == 3)
         {
             Destroy(gameObject);
+            number = 0;
         }
     }
    
