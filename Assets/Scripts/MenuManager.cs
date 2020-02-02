@@ -9,10 +9,22 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject panelCredits;
     [SerializeField] private GameObject panelMenuStartGame;
 
-    public void LoadScene (string sceneName)
+    //public void LoadScene (string sceneName)
+    //{
+    //    Time.timeScale = 1;
+    //    SceneManager.LoadScene(sceneName);
+    //}
+    public void StartGame()
     {
+        SceneManager.LoadScene("Game");
         Time.timeScale = 1;
-        SceneManager.LoadScene(sceneName);
+        Score.score = 0;
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 0;
     }
 
     public void Quit()
@@ -53,4 +65,6 @@ public class MenuManager : MonoBehaviour
         panelMenuStartGame.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
+
+ 
 }

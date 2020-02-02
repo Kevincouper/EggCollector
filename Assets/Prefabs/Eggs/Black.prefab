@@ -253,7 +253,6 @@ GameObject:
   - component: {fileID: 5674288576716531147}
   - component: {fileID: 5142209417401052251}
   - component: {fileID: -3299285451200008950}
-  - component: {fileID: 1116650445}
   m_Layer: 10
   m_Name: Black
   m_TagString: blackEgg
@@ -389,15 +388,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   egg: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1116650445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3712123349962420686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75e8936369c9c4742be5b8f47e4b7de0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

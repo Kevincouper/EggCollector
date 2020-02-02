@@ -20,7 +20,7 @@ public class EggSpawning : MonoBehaviour
     
     
 
-    public static bool isSpawning = true;
+    public static bool isSpawning = false;
     bool isRandomNmb = true;
 
     int randomNumber = 1;
