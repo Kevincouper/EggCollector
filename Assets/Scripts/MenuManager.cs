@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject panelCredits;
     [SerializeField] private GameObject panelMenuStartGame;
 
+
     //public void LoadScene (string sceneName)
     //{
     //    Time.timeScale = 1;

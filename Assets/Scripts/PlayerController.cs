@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour
     {
         if (isGround)
         {
-            Debug.Log("Touch ground");
             isControlling = false;
             EggSpawning.isSpawning = true;
             isGround = false;

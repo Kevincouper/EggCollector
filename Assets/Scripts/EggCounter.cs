@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class EggCounter : MonoBehaviour
 {
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private string eggName;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "blackEgg")
+        if (collision.gameObject.tag == eggName)
         {
-            CheckWinBlack.number += 1;
-            Debug.Log(CheckWinBlack.number);
+            CheckWin.number += 1;
+            Debug.Log(CheckWin.number);
         }
     }
 }
