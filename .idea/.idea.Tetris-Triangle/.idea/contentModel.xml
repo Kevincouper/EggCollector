@@ -10,6 +10,7 @@
           <e p="CheckWin.cs" t="Include" />
           <e p="EggCounter.cs" t="Include" />
           <e p="EggSpawning.cs" t="Include" />
+          <e p="EndGame.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="MenuManager.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />

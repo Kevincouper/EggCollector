@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject panelWin;
     [SerializeField] private GameObject panelCredits;
     [SerializeField] private GameObject panelMenuStartGame;
+    [SerializeField] private GameObject panelEndGame;
 
 
     //public void LoadScene (string sceneName)
@@ -20,12 +21,14 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Game");
         Time.timeScale = 1;
         Score.score = 0;
+        panelEndGame.SetActive(false);
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 0;
+        panelEndGame.SetActive(false);
     }
 
     public void Quit()

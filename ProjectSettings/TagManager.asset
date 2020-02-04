@@ -9,6 +9,7 @@ TagManager:
   - whiteEgg
   - purpleEgg
   - yellowEgg
+  - EndGame
   layers:
   - Default
   - TransparentFX

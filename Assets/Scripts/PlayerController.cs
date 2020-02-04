@@ -10,12 +10,14 @@ public class PlayerController : MonoBehaviour
     float speedY = -4f;
     private float speedX = 0f;
     private float movementX = 0f;
-    [SerializeField] GameObject egg;
+    //[SerializeField] GameObject egg;
     [SerializeField] private Vector3 startPosition;
 
     private bool isGround = false;
 
     private bool isControlling = true;
+    
+    //[SerializeField] private GameObject panelEndGame;
 
     void Start()
     {
