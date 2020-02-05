@@ -17,6 +17,7 @@
           <e p="Score.cs" t="Include" />
           <e p="ScoreBonus.cs" t="Include" />
           <e p="TestsScriptsSolange" t="Include">
+            <e p="MatrixGrid.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
           </e>
         </e>
