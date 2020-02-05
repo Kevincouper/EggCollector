@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     private bool isGround = false;
 
     private bool isControlling = true;
+
+    private bool goLeft = true;
+    private bool goRight = true;
+    
     
     //[SerializeField] private GameObject panelEndGame;
 
@@ -26,6 +30,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if ( transform.position.x <= 0.5)
+        {
+            goLeft = false;
+        }
+        else
+        {
+            goLeft = true;
+        }
+        
+        if ( transform.position.x >= 6.4)
+        {
+            goRight = false;
+        }
+        else
+        {
+            goRight = true;
+        }
         
         Grounded();
         
@@ -33,25 +54,25 @@ public class PlayerController : MonoBehaviour
         {
             body.velocity = new Vector2(speedX, speedY);
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Q) && goLeft)
             {
                 LeftDirection();
             }
 
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.E) && goRight)
             {
                 RightDirection();
             }
         }
     }
     
-    void LeftDirection()
+    public void LeftDirection()
 
     {
         body.position += new Vector2(-1f, 0);
     }
 
-    void RightDirection()
+    public void RightDirection()
     {
         body.position += new Vector2(1f, 0);
     }

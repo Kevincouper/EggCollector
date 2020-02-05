@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811957a00b1db904eb8f62714d63fa1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  egg: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &-8772883004831807323
 MonoBehaviour:
@@ -185,7 +184,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.225, y: 0.21499999}
-      - {x: 0.065, y: 0.315}
+      - {x: 0.014123917, y: 0.2900003}
       - {x: -0.008500576, y: 0.2874101}
       - {x: -0.175, y: 0.225}
       - {x: -0.265, y: 0.105}

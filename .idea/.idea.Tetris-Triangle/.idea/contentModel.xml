@@ -7,7 +7,8 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="CheckWin.cs" t="Include" />
+          <e p="CheckWinBlack.cs" t="Include" />
+          <e p="EggCombo.cs" t="Include" />
           <e p="EggCounter.cs" t="Include" />
           <e p="EggSpawning.cs" t="Include" />
           <e p="EndGame.cs" t="Include" />
@@ -17,6 +18,7 @@
           <e p="Score.cs" t="Include" />
           <e p="ScoreBonus.cs" t="Include" />
           <e p="TestsScriptsSolange" t="Include">
+            <e p="EggsObject.cs" t="Include" />
             <e p="MatrixGrid.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
           </e>
