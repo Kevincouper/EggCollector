@@ -21,6 +21,6 @@ public class MatrixGrid
 
     //private void OnDrawGizmos()
     //{
-    //    Gizmos.DrawCube(grid.transform.position.x, grid.transform.position.y);
+    //    Gizmos.DrawCube(grid[1,1].transform.position.x, grid.transform.position.y);
     //}
 }
