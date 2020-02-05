@@ -6,22 +6,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D body;
-    Vector2 direction;
+
     float speedY = -4f;
     private float speedX = 0f;
-    private float movementX = 0f;
-    //[SerializeField] GameObject egg;
-    [SerializeField] private Vector3 startPosition;
 
     private bool isGround = false;
-
     private bool isControlling = true;
-
     private bool goLeft = true;
     private bool goRight = true;
-    
-    
-    //[SerializeField] private GameObject panelEndGame;
 
     void Start()
     {
@@ -33,6 +25,7 @@ public class PlayerController : MonoBehaviour
         if ( transform.position.x <= 0.5)
         {
             goLeft = false;
+            Debug.Log("Sort pas du board putain!!!");
         }
         else
         {
@@ -54,12 +47,12 @@ public class PlayerController : MonoBehaviour
         {
             body.velocity = new Vector2(speedX, speedY);
 
-            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Q) && goLeft)
+            if (Input.GetKeyDown(KeyCode.Q) && goLeft)
             {
                 LeftDirection();
             }
 
-            if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.E) && goRight)
+            if (Input.GetKeyDown(KeyCode.E) && goRight)
             {
                 RightDirection();
             }
