@@ -15,9 +15,12 @@ public class PlayerController : MonoBehaviour
     private bool goLeft = true;
     private bool goRight = true;
 
+    private Vector3 targetPosition;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        body.velocity = new Vector2(speedX, speedY);
     }
 
     void Update()
@@ -42,32 +45,36 @@ public class PlayerController : MonoBehaviour
         }
         
         Grounded();
-        
-        if (isControlling)
+
+        if (Input.GetMouseButtonDown(0))
         {
-            body.velocity = new Vector2(speedX, speedY);
-
-            if (Input.GetKeyDown(KeyCode.Q) && goLeft)
+            SetTargetPosition();
+        
+            if (isControlling)
             {
-                LeftDirection();
-            }
+                body.velocity = new Vector2(speedX, speedY);
 
-            if (Input.GetKeyDown(KeyCode.E) && goRight)
-            {
-                RightDirection();
+                if (targetPosition.x < 3.5f && goLeft)
+                {
+                    LeftDirection();
+                }
+
+                if (targetPosition.x > 3.5f && goRight)
+                {
+                    RightDirection();
+                }
             }
         }
     }
-    
-    public void LeftDirection()
 
+    public void LeftDirection()
     {
-        body.position += new Vector2(-1f, 0);
+       transform.position += new Vector3(-1f, 0, 0);
     }
 
     public void RightDirection()
     {
-        body.position += new Vector2(1f, 0);
+        transform.position += new Vector3(1f, 0, 0);
     }
 
     void Grounded()
@@ -89,6 +96,11 @@ public class PlayerController : MonoBehaviour
             // body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             isGround = true;
         }
+    }
+    void SetTargetPosition()
+    {
+        targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        targetPosition.z = transform.position.z;
     }
 
 }
