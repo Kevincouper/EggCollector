@@ -79,6 +79,7 @@ public class triggerCheck : MonoBehaviour
             Debug.Log("destroy");
             burst = true;
             score.destructionScore();
+            Burst();
             state = State.CHECK_FOR_DESTRUCTION;
         }
     }
@@ -100,11 +101,11 @@ public class triggerCheck : MonoBehaviour
         {
             downTrigger.StartDestroy();
         }
-        if (burst)
-        {
-            Burst();
-            burst = false;
-        }
+        //if (burst)
+        //{
+        //    Burst();
+        //    burst = false;
+        //}
             destroy();
         state = State.CHECK_TRIGGERS;
     }
@@ -119,7 +120,7 @@ public class triggerCheck : MonoBehaviour
     }
     void destroy()
     {
-        Destroy(gameObject, 1.2f);
+        Destroy(gameObject, 1f);
     }
     public void changeState()
     {
