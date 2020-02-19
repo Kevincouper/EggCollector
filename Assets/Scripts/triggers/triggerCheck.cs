@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class triggerCheck : MonoBehaviour
 {
@@ -17,6 +18,12 @@ public class triggerCheck : MonoBehaviour
     [SerializeField] upTrigger upTrigger;
     [SerializeField] downTrigger downTrigger;
 
+    [SerializeField] ParticleSystem deathBurst;
+    [SerializeField] TextMeshProUGUI text;
+    bool burst = false;
+
+    ScoreBonus score;
+
     enum State
     {
         CHECK_TRIGGERS,
@@ -27,7 +34,7 @@ public class triggerCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = gameObject.GetComponent<ScoreBonus>();
     }
 
     // Update is called once per frame
@@ -45,6 +52,7 @@ public class triggerCheck : MonoBehaviour
                 break;
             case State.CHECK_FOR_DESTRUCTION:
                 DestroySameColor();
+               
                 break;
         }
 
@@ -69,6 +77,8 @@ public class triggerCheck : MonoBehaviour
         if(rightTouched&&leftTouched||upTouched&&downTouched||rightTouched&&upTouched||rightTouched&&downTouched||leftTouched&&upTouched||leftTouched&&downTouched)
         {
             Debug.Log("destroy");
+            burst = true;
+            score.destructionScore();
             state = State.CHECK_FOR_DESTRUCTION;
         }
     }
@@ -90,8 +100,26 @@ public class triggerCheck : MonoBehaviour
         {
             downTrigger.StartDestroy();
         }
-        Destroy(gameObject, 1);
+        if (burst)
+        {
+            Burst();
+            burst = false;
+        }
+            destroy();
         state = State.CHECK_TRIGGERS;
+    }
+    void Burst()
+    {
+        if (deathBurst != null)
+        {
+            Debug.Log("burst");
+            deathBurst.Play();
+
+        }
+    }
+    void destroy()
+    {
+        Destroy(gameObject, 1.2f);
     }
     public void changeState()
     {

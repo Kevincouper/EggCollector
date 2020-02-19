@@ -20,4 +20,8 @@ public class ScoreBonus : MonoBehaviour
             Score.score += 5;
         }
     }
+    public void destructionScore()
+    {
+        Score.score += 100;
+    }
 }

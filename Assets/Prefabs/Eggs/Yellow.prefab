@@ -201,6 +201,8 @@ MonoBehaviour:
   leftTrigger: {fileID: 987107388537278361}
   upTrigger: {fileID: 2185678272203794378}
   downTrigger: {fileID: 3193425625181779721}
+  deathBurst: {fileID: 0}
+  text: {fileID: 0}
 --- !u!50 &7451198219748801823
 Rigidbody2D:
   serializedVersion: 4
