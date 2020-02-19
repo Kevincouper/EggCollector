@@ -24,11 +24,11 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {
+    {            Debug.Log("Sort pas du board putain!!!");
         if ( transform.position.x <= 0.5)
         {
             goLeft = false;
-            Debug.Log("Sort pas du board putain!!!");
+
         }
         else
         {
